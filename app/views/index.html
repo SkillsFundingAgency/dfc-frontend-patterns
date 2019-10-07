@@ -1,62 +1,44 @@
+
 {% extends "layout.html" %}
 
-{% set releaseVersion = '0.1' %}
-
 {% block pageTitle %}
-{{serviceName}} - Home
+  GOV.UK Prototype Kit
 {% endblock %}
 
+{% block content %}
 
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        The GOV.UK Prototype Kit
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <p>
+        This kit lets you rapidly create HTML prototypes of GOV.UK services.
+      </p>
 
+      <p>
+        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
+      </p>
 
-{% block after_header %}
-<p>Test</p>
-{% endblock %}
+      <h2 class="govuk-heading-m">About this page</h2>
 
-{% block main %}
-<div class="ec-hero">
-    <div class="govuk-width-container">
+      <p>We recommend you add links to your prototype to this page, rather than delete it.
+        You'll find this page in the kit at '/app/views/index.html'.</p>
 
-        <section class="govuk-main-wrapper {{ mainClasses }}" id="hero">
-            <h1 class="govuk-heading-l">
-                {{serviceName}}
-                <span class="govuk-caption-l">Version {{releaseVersion}}</span>
-            </h1>
-            <p class="govuk-body-l">A reference for design patterns and snippets used in front end development on explore careers. These should be used to maintain consistency accross the service, and only when GOV.UK design patterns are deemed to not meet user needs.</p>
-            <a href="intro" class="govuk-button ec-button">Get started</a>
-        </section>
+      <p>You can change the service name by editing the file '/app/config.js'.</p>
+
+      <h2 class="govuk-heading-m">Examples and documentation</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
+        <li>
+          <a href="https://design-system.service.gov.uk">
+            GOV.UK Design System
+          </a>
+        </li>
+      </ul>
     </div>
-</div>
-
-
-<div class="govuk-width-container">
-    <section class="govuk-main-wrapper">
-        <h2 class="govuk-heading-m">Tried and tested snippets</h2>
-        <p>The following designs have been through multiple rounds of user research and were approved via GDS assessment. All snippets are user need driven.</p>
-        <ul class="govuk-list">
-            <li><a href="/snippet/hero-banner">Hero banner</a></li>
-            <li><a href="/snippet/hero-banner-grey">Hero banner (Grey)</a></li>
-            <li><a href="/snippet/search-result">Detailed search results</a></li>
-            <li><a href="/snippet/3-column-grid">Three column content grid</a></li>
-            <li><a href="/snippet/feedback-survey">Customer feedback survey</a></li>
-            <li><a href="/snippet/jump-links">Jump links</a></li>
-            <li><a href="/snippet/rhc-search">Right hand column search</a></li>
-            <li><a href="/snippet/30-30-40-grid">30 30 40 Grid</a></li>
-            <li><a href="/snippet/content-headers">Alternative content headers</a></li>
-        </ul>
-
-        <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
-
-        <h2 class="govuk-heading-m">Expermiental snippets</h2>
-        <p>Designs that are currently a work in progress or those that were initially looked at but didn't make it to the live service.</p>
-        <!--<ul class="govuk-list">
-            <li><a href="#"></a></li>
-        </ul>-->
-        <p class="govuk-body-s">Oops, looks like there's nothing here yet</p>
-
-        <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
-
-    </section>
 </div>
 
 {% endblock %}
