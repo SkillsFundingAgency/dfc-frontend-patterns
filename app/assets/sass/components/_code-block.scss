@@ -1,0 +1,128 @@
+.snippet {
+  h1 {
+    margin-bottom: 5px;
+  }
+
+  .snippet-description {
+    margin-top: 30px;
+  }
+
+  .snippet-example {
+    border: 1px solid #6f777b;
+    margin-bottom: -1px;
+    position: relative;
+
+    .snippet-example-newwindow {
+      position: absolute;
+      background-color: #6f777b;
+      padding: 3px 8px;;
+      font-size: 12px;
+      text-decoration: none;
+
+    }
+
+    iframe {
+      border: none;
+      resize: both;
+      overflow: auto;
+      max-width: 100%;
+      background-color: #ffffff;
+      width: 100%;
+      height: 320px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  }
+
+  .snippet-tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #6f777b;
+    box-sizing: border-box;
+    z-index: 1;
+    position: relative;
+  }
+
+  .snippet-tabs__item {
+    float: left;
+    display: block;
+    padding: 15px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    color: #005ea5;
+    background: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    margin: -1px 0;
+  }
+
+  .snippet-tabs__item[aria-selected="true"] {
+    border-color: #005ea5;
+    background: #f0f0f0;
+  }
+
+  .snippet-tabs__container {
+    position: relative;
+    border: 1px solid #6f777b;
+    box-sizing: border-box;
+    overflow: auto;
+    padding: 20px;
+    background: #f0f0f0;
+    top: -7px;
+
+    pre {
+      background-color: transparent !important;
+    }
+  }
+
+  .snippet-copy-button {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 15px;
+    min-width: 80px;
+    padding: 4px 10px 0;
+    border: 1px solid #00823b;
+    color: #00823b;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  pre {
+    max-width: 100%;
+    margin: 0;
+    padding: govuk-spacing(4);
+    overflow: auto;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    @include govuk-responsive-margin(4, "bottom");
+  }
+
+  .no-js {
+    // Adjustments in app-pane layout as it has toc below
+    .app-pane__content .app-content {
+
+      @include govuk-media-query($until: tablet) {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  // Add styling for inline code
+  li code,
+  td code,
+  p code {
+    padding: 0 govuk-spacing(1);
+    color: #d13118;
+    background-color: govuk-colour("light-grey");
+  }
+}
+
