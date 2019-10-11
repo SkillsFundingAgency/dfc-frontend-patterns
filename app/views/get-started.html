@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+How to get started - National Careers Service design library
+{% endblock %}
+
+{% block beforeContent %}
+  </div>
+  <div class="primary-hero shorter-hero">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <a href="/" class="govuk-back-link white-link">Back</a>
+        <h1 class="govuk-heading-l">How to get started</h1>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="govuk-width-container">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l">Import our styles from the CDN</h2>
+    <p>The National Careers Service has a dedicated assets repository, which is deployed to a CDN. Here, we host all the assets required to run our digital services. To get started, you will need to reference
+    our stylesheets and scripts.</p><p>The CSS file required is named all.min.css - this is a minified version which references GOV.UK styles and our own customised styles. The JavaScript file is all.min.js.</p>
+    <p>You can view the repository on <a href="https://github.com/SkillsFundingAgency/dfc-digital-assets" target="_blank">GitHub</a>, where you read about how to reference the files in the README file.</p>
+
+    </div>
+</div>
+
+{% endblock %}

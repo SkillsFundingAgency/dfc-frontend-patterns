@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% set releaseVersion = '0.1' %}
+{% set snippetName = 'Primary hero banner' %}
+{% set snippetDescription = "This is the primary banner which is used as a masthead to our service and products." %}
+{% set snippetURL = "primary-hero" %}
+
+
+{% block pageTitle %}
+{{snippetName}} - National Careers Service design library
+{% endblock %}
+
+{% block beforeContent %}
+  </div>
+  <div class="primary-hero shorter-hero">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+        <a href="/" class="govuk-back-link white-link">Back</a>
+        <h1 class="govuk-heading-l">{{snippetName}}</h1>
+        <p class="govuk-body-lead">{{snippetDescription}}</p>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="govuk-width-container">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="snippet">
+      <div class="snippet-example-wrapper tabs">
+          <div class="snippet-example">
+              <a href="/patterns/live/{{snippetURL}}.html" target="_blank" class="snippet-example-newwindow">Open this example in a new window</a>
+              <iframe src="/patterns/live/{{snippetURL}}.html"></iframe>
+          </div>
+
+              <div class="snippet-tabs" role="tablist">
+                  <button role="tab" aria-selected="true" aria-controls="HTML-tab" id="HTML" class="snippet-tabs__item">
+                      HTML
+                  </button>
+              </div>
+
+          <div class="snippet-tabs__container" tabindex="0" role="tabpanel" id="HTML-tab" aria-labelledby="HTML">
+              <button class="snippet-copy-button" data-clipboard-target="#HTML-content">Copy</button>
+              <pre id="HTML-content"><code class="language-html">&lt;div class="primary-hero"&gt;
+    &lt;div class="govuk-width-container"&gt;
+        &lt;div class="govuk-grid-row"&gt;
+            &lt;div class="govuk-grid-column-two-thirds"&gt;
+                &lt;h1 class="govuk-heading-xl"&gt;Primary hero banner&lt;/h1&gt;
+                    &lt;p&gt;This is an example of a primary hero banner.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+          <h2 class="govuk-heading-m govuk-!-margin-top-4">When to use</h2>
+          <p>To be added</p>
+          <h2 class="govuk-heading-m">Research</h2>
+          <p>To be added</p>
+
+      </div>
+      </div>
+
+
+    </div>
+</div>
+
+{% endblock %}
