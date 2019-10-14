@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% set releaseVersion = '0.1' %}
+{% set snippetName = 'Header' %}
+{% set snippetDescription = "This is the header which we use across the National Careers Service." %}
+{% set snippetURL = "header" %}
+{% set snippetCode %}<header class="govuk-header" data-module="header" role="banner">
+                     	<div class="govuk-header__container govuk-width-container">
+                     		<a class="govuk-header__link govuk-header__link--service-name" href="/">National Careers Service</a> <button aria-controls="navigation" aria-label="Show or hide Top Level Navigation" class="govuk-header__menu-button js-header-toggle" role="button" type="button">Menu</button>
+                     		<nav>
+                     			<ul aria-label="Top Level Navigation" class="govuk-header__navigation" id="navigation">
+                     				<li class="govuk-header__navigation-item">
+                     					<a class="govuk-header__link" href="/explore-careers" id="nav-EC" target="_self">Explore careers</a>
+                     				</li>
+                     				<li class="govuk-header__navigation-item">
+                     					<a class="govuk-header__link" href="/skills-assessment" id="nav-SHC" target="_self">Skills assessment</a>
+                     				</li>
+                     				<li class="govuk-header__navigation-item">
+                     					<a class="govuk-header__link" href="/find-a-course" id="nav-FC" target="_self">Find a course</a>
+                     				</li>
+                     				<li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+                     					<a class="govuk-header__link" href="/contact-us" id="nav-CA" target="_self">Contact us</a>
+                     				</li>
+                     				<li class="govuk-header__navigation-item">
+                     					<a class="govuk-header__link" href="/about-us" id="nav-AU" target="_self">About us</a>
+                     				</li>
+                     				<li class="govuk-header__navigation-item">
+                     					<a class="govuk-header__link" href="/get-a-job" id="nav-HTG" target="_self">Help to get a job</a>
+                     				</li>
+                     			</ul>
+                     		</nav>
+                     	</div>
+                     </header>
+{% endset %}
+
+
+{% block pageTitle %}
+{{snippetName}} - National Careers Service design library
+{% endblock %}
+
+{% block beforeContent %}
+  </div>
+  <div class="primary-hero shorter-hero">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+        <a href="/" class="govuk-back-link white-link">Back</a>
+        <h1 class="govuk-heading-l">{{snippetName}}</h1>
+        <p class="govuk-body-lead">{{snippetDescription}}</p>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="govuk-width-container">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="snippet">
+      <div class="snippet-example-wrapper tabs">
+          <div class="snippet-example">
+              <a href="/patterns/live/{{snippetURL}}.html" target="_blank" class="snippet-example-newwindow">Open this example in a new window</a>
+              <iframe src="/patterns/live/{{snippetURL}}.html"></iframe>
+          </div>
+
+              <div class="snippet-tabs" role="tablist">
+                  <button role="tab" aria-selected="true" aria-controls="HTML-tab" id="HTML" class="snippet-tabs__item">
+                      HTML
+                  </button>
+              </div>
+
+          <div class="snippet-tabs__container" tabindex="0" role="tabpanel" id="HTML-tab" aria-labelledby="HTML">
+              <button class="snippet-copy-button" data-clipboard-target="#HTML-content">Copy</button>
+              <pre id="HTML-content"><code class="language-html">{{snippetCode}}</code></pre>
+          </div>
+                    <h2 class="govuk-heading-m govuk-!-margin-top-4">When to use</h2>
+                    <p>To be added</p>
+                    <h2 class="govuk-heading-m">Research</h2>
+                    <p>To be added</p>
+      </div>
+      </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

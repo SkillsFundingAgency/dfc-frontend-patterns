@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block beforeContent %}
+  </div><div class="govuk-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div></div>
+    <div class="govuk-width-container">
+    <div id="results">
+    	<div class="results-block">
+    		<div class="inner-block">
+    			<ol class="results-list">
+    				<li>
+    					<h3><a href="">Nurse</a></h3>
+    					<p class="meta"><span class="govuk-visually-hidden">Alternative titles for this job include</span> Adult nurse</p>
+    					<p class="result-description">Nurses care for adults who are sick, injured or have physical disabilities.</p>
+    					<p class="results-salary">Salary: <span>£24,214 to £37,267</span></p>
+    					<p class="results-categories">Found in: <a href="">Healthcare</a></p>
+    				</li>
+    			</ol>
+    		</div>
+    	</div>
+    </div>
+    </div>
+{% endblock %}
