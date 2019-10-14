@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Icons
+{% endblock %}
+
+{% block beforeContent %}
+  </div><div class="govuk-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div></div>
+  <div class="secondary-hero">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Column with icons</h1>
+        <p>This is an example of a secondary hero banner.</p>
+        </div>
+        </div>
+        <div class="govuk-grid-row">
+            <div id="Salary" class="column-40 secondary-hero-block">
+                <h2>Average salary <span>(a year)</span></h2>
+                <div class="pound-block secondary-hero-block-content">
+                    <p class="dfc-code-jpsstarter">£24,214 <span>Starter</span></p>
+                    <i class="govuk-visually-hidden">to</i>
+                    <p class="dfc-code-jpsexperienced">£37,267 <span>Experienced</span></p>
+                </div>
+            </div>
+                <div id="WorkingHours" class="column-30 secondary-hero-block">
+                    <h2>Typical hours <span>(a week)</span></h2>
+                    <div class="clock-block secondary-hero-block-content">
+                        <p class="dfc-code-jphours">
+        36 to 38                    <span class="dfc-code-jpwhoursdetail">a week</span>
+                        </p>
+                    </div>
+                </div>
+                    <div id="WorkingHoursPatterns" class="column-30 secondary-hero-block">
+                        <h2>
+                            You could work
+                        </h2>
+                        <div class="calendar-block secondary-hero-block-content">
+                            <p class="dfc-code-jpwpattern">
+                                evenings / weekends / bank holidays
+                                    <span class="dfc-code-jpwpatterndetail">on shifts</span>
+                            </p>
+                        </div>
+                    </div>
+            </div>
+    </div>
+  </div>
+{% endblock %}
