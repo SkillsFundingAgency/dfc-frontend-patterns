@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Homepage
+{% endblock %}
+
+{% block beforeContent %}
+  </div><div class="govuk-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div></div>
+{% endblock %}
+{% block content %}
+  <div class="govuk-width-container">
+  <div class="govuk-grid-row egg-center">
+	<div class="govuk-grid-column-one-quarter egg-center">
+		<div class="eggs">
+			<a class="eggs-text" href="/explore-careers">
+				<h2 class="govuk-heading-m home-headings">Explore careers</h2>
+				<p class="govuk-body" style="padding:0;">Find the next step in your career</p>
+			</a>
+		</div>
+	</div>
+	<div class="govuk-grid-column-one-quarter egg-center">
+		<div class="eggs">
+			<a class="eggs-text" href="/skills-assessment">
+				<h2 class="govuk-heading-m home-headings">Skills assessment</h2>
+				<p class="govuk-body">Learn more about your skills</p>
+			</a>
+		</div>
+	</div>
+	<div class="govuk-grid-column-one-quarter egg-center">
+		<div class="eggs">
+			<a class="eggs-text" href="/find-a-course">
+				<h2 class="govuk-heading-m home-headings">Find a course</h2>
+				<p class="govuk-body">Study for your future</p>
+			</a>
+		</div>
+	</div>
+	<div class="govuk-grid-column-one-quarter egg-center">
+		<div class="eggs egg-center">
+			<a class="eggs-text" href="/get-a-job">
+				<h2 class="govuk-heading-m home-headings">Help to get a job</h2>
+				<p class="govuk-body">How to get the job you want</p>
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+{% endblock %}

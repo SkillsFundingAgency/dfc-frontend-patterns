@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% set releaseVersion = '0.1' %}
+{% set snippetName = 'Homepage' %}
+{% set snippetDescription = "This element is the navigation we utilise on our homepage. This allows users to navigate around the different services we offer." %}
+{% set snippetURL = "homepage" %}
+{% set snippetCode %}<div class="govuk-grid-row egg-center">
+	<div class="govuk-grid-column-one-quarter egg-center">
+		<div class="eggs">
+			<a class="eggs-text" href="/explore-careers">
+				<h2 class="govuk-heading-m home-headings">Explore careers</h2>
+				<p class="govuk-body" style="padding:0;">Find the next step in your career</p>
+			</a>
+		</div>
+	</div>
+	<div class="govuk-grid-column-one-quarter egg-center">
+		<div class="eggs">
+			<a class="eggs-text" href="/skills-assessment">
+				<h2 class="govuk-heading-m home-headings">Skills assessment</h2>
+				<p class="govuk-body">Learn more about your skills</p>
+			</a>
+		</div>
+	</div>
+	<div class="govuk-grid-column-one-quarter egg-center">
+		<div class="eggs">
+			<a class="eggs-text" href="/find-a-course">
+				<h2 class="govuk-heading-m home-headings">Find a course</h2>
+				<p class="govuk-body">Study for your future</p>
+			</a>
+		</div>
+	</div>
+	<div class="govuk-grid-column-one-quarter egg-center">
+		<div class="eggs egg-center">
+			<a class="eggs-text" href="/get-a-job">
+				<h2 class="govuk-heading-m home-headings">Help to get a job</h2>
+				<p class="govuk-body">How to get the job you want</p>
+			</a>
+		</div>
+	</div>
+</div>
+{% endset %}
+
+
+{% block pageTitle %}
+{{snippetName}} - National Careers Service design library
+{% endblock %}
+
+{% block beforeContent %}
+  </div>
+  <div class="primary-hero shorter-hero">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+        <a href="/" class="govuk-back-link white-link">Back</a>
+        <h1 class="govuk-heading-l">{{snippetName}}</h1>
+        <p class="govuk-body-lead">{{snippetDescription}}</p>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="govuk-width-container">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="snippet">
+      <div class="snippet-example-wrapper tabs">
+          <div class="snippet-example">
+              <a href="/patterns/live/{{snippetURL}}.html" target="_blank" class="snippet-example-newwindow">Open this example in a new window</a>
+              <iframe src="/patterns/live/{{snippetURL}}.html"></iframe>
+          </div>
+
+              <div class="snippet-tabs" role="tablist">
+                  <button role="tab" aria-selected="true" aria-controls="HTML-tab" id="HTML" class="snippet-tabs__item">
+                      HTML
+                  </button>
+              </div>
+
+          <div class="snippet-tabs__container" tabindex="0" role="tabpanel" id="HTML-tab" aria-labelledby="HTML">
+              <button class="snippet-copy-button" data-clipboard-target="#HTML-content">Copy</button>
+              <pre id="HTML-content"><code class="language-html">{{snippetCode}}</code></pre>
+          </div>
+                    <h2 class="govuk-heading-m govuk-!-margin-top-4">When to use</h2>
+                    <p>We've used this pattern as our homepage, to allow users easy navigation through the service. This is helpful for our user group which come to the National Careers Service requiring assistance, but are not sure exactly what they need from us, and what tools we offer.</p>
+                    <h2 class="govuk-heading-m">Research</h2>
+                    <h3 class="govuk-heading-s">Background</h3>
+                    <p>We often see users visit our site because they are told of the National Careers Service as a service which can help them move forward in their career path. We've seen typically with users who had visited our previous homepage, which had a static list of links to our different products, that they found the homepage disengaging and didn't serve their needs.</p>
+                    <h3 class="govuk-heading-s">Research findings</h3>
+                    <p>We tested different variants of patterns of navigation and research pointed to the rings functioning the best and being most engaging for users. We learnt it was found as 'easy to navigate' by users, and the word 'easy' was repeated in several research sessions we held. Further information is available on Confluence within the findings for sprint <a href="https://skillsfundingagency.atlassian.net/wiki/spaces/DFC/pages/1453326393/Sprint+21+Homepage">21</a> and sprint <a href="https://skillsfundingagency.atlassian.net/wiki/spaces/DFC/pages/1472987424/Sprint+23+FaC+journey">23</a>.</p>
+      </div>
+      </div>
+
+
+    </div>
+</div>
+
+{% endblock %}
