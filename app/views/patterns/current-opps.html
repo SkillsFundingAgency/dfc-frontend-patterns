@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+{% set releaseVersion = '0.1' %}
+{% set snippetName = 'Current opportunities' %}
+{% set snippetLive = "yes" %}
+{% set snippetDescription = "Tiles which shows opportunities currently available to the user." %}
+{% set snippetURL = "current-opps" %}
+
+
+{% block pageTitle %}
+{{snippetName}} - National Careers Service design library
+{% endblock %}
+
+{% block beforeContent %}
+  </div>
+  <div class="primary-hero shorter-hero">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+        <a href="/" class="govuk-back-link white-link">Back</a>
+        <h1 class="govuk-heading-l">{{snippetName}}</h1>
+        <p class="govuk-body-lead">{{snippetDescription}}</p>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="govuk-width-container">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="snippet">
+      <div class="snippet-example-wrapper tabs">
+          <div class="snippet-example">
+              <a href="/patterns/live/{{snippetURL}}.html" target="_blank" class="snippet-example-newwindow">Open this example in a new window</a>
+              <iframe src="/patterns/live/{{snippetURL}}.html"></iframe>
+          </div>
+
+              <div class="snippet-tabs" role="tablist">
+                  <button role="tab" aria-selected="true" aria-controls="HTML-tab" id="HTML" class="snippet-tabs__item">
+                      HTML
+                  </button>
+              </div>
+
+          <div class="snippet-tabs__container" tabindex="0" role="tabpanel" id="HTML-tab" aria-labelledby="HTML">
+              <button class="snippet-copy-button" data-clipboard-target="#HTML-content">Copy</button>
+              <pre id="HTML-content"><code class="language-html">
+&lt;section id="CurrentOpportunities"&gt;
+    &lt;h2 class="job-profile-headings"&gt;Current opportunities&lt;/h2&gt;
+    &lt;div class="govuk-grid-row" id="appGeneric"&gt;
+        &lt;div class="govuk-grid-column-full"&gt;
+            &lt;h3 class="govuk-heading-m"&gt;
+              Apprenticeships
+              &lt;span class="govuk-caption-m"&gt;In England&lt;/span&gt;
+          &lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class="govuk-grid-column-one-half"&gt;
+            &lt;div class="opportunity-item"&gt;
+                &lt;h4 class="govuk-heading-s"&gt;
+                          &lt;a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1596537"&gt;Plumbing Apprentice&lt;/a&gt;
+                      &lt;/h4&gt;
+                &lt;ul class="govuk-list"&gt;
+                    &lt;li&gt;&lt;span class="govuk-body govuk-!-font-weight-bold"&gt;Wage: &lt;/span&gt; £156.00 &lt;span class="govuk-body-s govuk-secondary-colour"&gt;Weekly&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="govuk-body govuk-!-font-weight-bold"&gt;Location:&lt;/span&gt; Hull HU3 5QP&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="govuk-grid-column-one-half"&gt;
+            &lt;div class="opportunity-item"&gt;
+                &lt;h4 class="govuk-heading-s"&gt;
+                          &lt;a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1595315"&gt;Apprentice Plumber (Level 3)&lt;/a&gt;
+                      &lt;/h4&gt;
+                &lt;ul class="govuk-list"&gt;
+                    &lt;li&gt;&lt;span class="govuk-body govuk-!-font-weight-bold"&gt;Wage: &lt;/span&gt; £320.00 &lt;span class="govuk-body-s govuk-secondary-colour"&gt;Weekly&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="govuk-body govuk-!-font-weight-bold"&gt;Location:&lt;/span&gt; Sherborne DT9 3RQ&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="govuk-grid-column-two-thirds govuk-body-m dfc-code-jp-vacancyText"&gt;
+            &lt;a href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch"&gt;Find apprenticeships near you&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="govuk-grid-row dfc-code-jp-trainingCourse"&gt;
+        &lt;div class="govuk-grid-column-full"&gt;
+            &lt;h3 class="govuk-heading-m"&gt;
+              Courses
+              &lt;span class="govuk-caption-m"&gt;In England&lt;/span&gt;
+          &lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class="govuk-grid-column-one-half"&gt;
+            &lt;div class="opportunity-item"&gt;
+                &lt;h4 class="govuk-heading-s"&gt;
+                          &lt;a href="/find-a-course/course-details?courseid=55122438"&gt;Plumbing - Level 3&lt;/a&gt;
+                      &lt;/h4&gt;
+                &lt;ul class="govuk-list"&gt;
+                    &lt;li&gt;&lt;span class="govuk-body govuk-!-font-weight-bold"&gt;Provider:&lt;/span&gt; BLACKPOOL AND THE FYLDE COLLEGE&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="govuk-body govuk-!-font-weight-bold"&gt;Start date:&lt;/span&gt; 07 January 2020&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="govuk-body govuk-!-font-weight-bold"&gt;Location:&lt;/span&gt; Blackpool FY2 0HB&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="govuk-grid-column-two-thirds govuk-body dfc-code-jp-TrainingCoursesText"&gt;
+            &lt;a href="/find-a-course"&gt;Find courses near you&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;h3 class="govuk-heading-m"&gt;Jobs
+              &lt;span class="govuk-caption-m"&gt;In the United Kingdom&lt;/span&gt;&lt;/h3&gt;
+        &lt;p&gt;The &lt;a href="https://findajob.dwp.gov.uk"&gt;Find a job service&lt;/a&gt; can help you with your search for jobs and send alerts when new jobs become available.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+                                                                   </code></pre>
+          </div>
+                    <h2 class="govuk-heading-m govuk-!-margin-top-4">When to use</h2>
+                    <p>To be added</p>
+                    <h2 class="govuk-heading-m">Research</h2>
+                    <p>To be added</p>
+      </div>
+      </div>
+
+
+    </div>
+</div>
+
+{% endblock %}
