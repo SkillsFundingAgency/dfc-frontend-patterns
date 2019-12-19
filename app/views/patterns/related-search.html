@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% set releaseVersion = '0.1' %}
+{% set snippetName = 'Search further careers' %}
+{% set snippetLive = "yes" %}
+{% set snippetDescription = "Searching for other careers from within a job profile, when the profile the user sees is not relevant to them." %}
+{% set snippetURL = "related-search" %}
+
+
+{% block pageTitle %}
+{{snippetName}} - National Careers Service design library
+{% endblock %}
+
+{% block beforeContent %}
+  </div>
+  <div class="primary-hero shorter-hero">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+        <a href="/" class="govuk-back-link white-link">Back</a>
+        <h1 class="govuk-heading-l">{{snippetName}}</h1>
+        <p class="govuk-body-lead">{{snippetDescription}}</p>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="govuk-width-container">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="snippet">
+      <div class="snippet-example-wrapper tabs">
+          <div class="snippet-example">
+              <a href="/patterns/live/{{snippetURL}}.html" target="_blank" class="snippet-example-newwindow">Open this example in a new window</a>
+              <iframe src="/patterns/live/{{snippetURL}}.html"></iframe>
+          </div>
+
+              <div class="snippet-tabs" role="tablist">
+                  <button role="tab" aria-selected="true" aria-controls="HTML-tab" id="HTML" class="snippet-tabs__item">
+                      HTML
+                  </button>
+              </div>
+
+          <div class="snippet-tabs__container" tabindex="0" role="tabpanel" id="HTML-tab" aria-labelledby="HTML">
+              <button class="snippet-copy-button" data-clipboard-target="#HTML-content">Copy</button>
+              <pre id="HTML-content"><code class="language-html">
+&lt;div class="job-profile-sidebar"&gt;
+    &lt;h3 id="job-profile-search" class="govuk-heading-m"&gt;Not what you're looking for?&lt;/h3&gt;
+    &lt;div class="job-profile-search"&gt;
+        &lt;h4&gt;Search further careers&lt;/h4&gt;
+        &lt;form action="/job-profiles/search/action" class="js-live-search-form site-search ui-front" id="job-profile-search-box" method="get"&gt;
+            &lt;div class="job-profile-search-content"&gt;
+                &lt;label for="search-main"&gt; Enter a job title&lt;/label&gt;
+                &lt;div class="search-input-wrapper"&gt;
+                    &lt;input class="govuk-input search-input js-search-focus js-autocomplete ui-autocomplete-input" data-autocomplete-fuzzysearch="True" data-autocomplete-maxlength="7" data-autocomplete-maxnumberdisplyed="5" data-autocomplete-minlength="2" data-autocomplete-source="/searchautocomplete" id="search-main" name="SearchTerm" type="search" value="" autocomplete="off"&gt;
+                &lt;/div&gt;
+                &lt;button class="submit" type="submit" value="Search"&gt;Search&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;input id="JobProfileUrl" name="JobProfileUrl" type="hidden" value="sports-commentator"&gt;
+            &lt;ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"&gt;&lt;/ul&gt;
+            &lt;ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"&gt;&lt;/ul&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt</code></pre>
+          </div>
+                    <h2 class="govuk-heading-m govuk-!-margin-top-4">When to use</h2>
+                    <p>To be added</p>
+                    <h2 class="govuk-heading-m">Research</h2>
+                    <p>To be added</p>
+      </div>
+      </div>
+
+
+    </div>
+</div>
+
+{% endblock %}
